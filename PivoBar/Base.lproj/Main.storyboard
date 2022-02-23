@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PivoBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bn-xE-abf">
+                                <rect key="frame" x="215" y="64" width="179" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Новый день">
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startNewDay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f5c-2z-F8c"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="пиво 50 р, стран,  остаток: 1011" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFh-4R-JMq">
+                                <rect key="frame" x="20" y="115" width="317" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Wsw-46-gh6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLq-Jy-fYL">
+                                <rect key="frame" x="20" y="64" width="179" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Проверка выручки">
+                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkMoney:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UGr-0m-aUY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kA-4H-UXK">
+                                <rect key="frame" x="353" y="115" width="41" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6kA-4H-UXK" secondAttribute="height" multiplier="1:1" id="ASQ-1U-HRl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="arrow.clockwise.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="updateVolume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RE8-06-SBU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBs-m6-DwN">
+                                <rect key="frame" x="20" y="172" width="81.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="qK8-qW-GJZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="0.5l "/>
+                                <connections>
+                                    <action selector="sellBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G1w-a4-fC4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YN-rt-nSw">
+                                <rect key="frame" x="117.5" y="172" width="81.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="dNN-ot-JCc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="1l"/>
+                                <connections>
+                                    <action selector="sellBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZG9-au-rvI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVw-zl-Yey">
+                                <rect key="frame" x="215" y="172" width="81.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="0Pk-fK-hPv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="1.5l"/>
+                                <connections>
+                                    <action selector="sellBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kGZ-a6-5ce"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJa-84-IfU">
+                                <rect key="frame" x="312.5" y="172" width="81.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="QcV-lW-fHX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="2l"/>
+                                <connections>
+                                    <action selector="sellBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3C2-LD-mgX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="пиво 50 р,  стран, ост" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEL-fU-6NY">
+                                <rect key="frame" x="20" y="223" width="317" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Er3-7F-VCA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XY-eS-DbN">
+                                <rect key="frame" x="353" y="223" width="41" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8XY-eS-DbN" secondAttribute="height" multiplier="1:1" id="hro-kQ-Afy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="arrow.clockwise.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="updateVolume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AHQ-pm-FyV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLL-cC-tGy">
+                                <rect key="frame" x="20" y="280" width="81.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="q5r-L9-ucK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="0.5l "/>
+                                <connections>
+                                    <action selector="sellBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AEz-a9-lKc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvD-QK-I6M">
+                                <rect key="frame" x="117.5" y="280" width="81.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="259-o7-u6S"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="1l"/>
+                                <connections>
+                                    <action selector="sellBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ory-Nf-CbM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTU-gQ-gX5">
+                                <rect key="frame" x="215" y="280" width="81.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="af7-OA-CgT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="1.5l"/>
+                                <connections>
+                                    <action selector="sellBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EYS-Rw-tIz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mh2-fV-zwd">
+                                <rect key="frame" x="312.5" y="280" width="81.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="I5y-01-cdF"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="2l"/>
+                                <connections>
+                                    <action selector="sellBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Otd-7W-oXQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="пиво 50 р,  стран, ост" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKr-pG-dfp">
+                                <rect key="frame" x="20" y="331" width="317" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="YLo-RQ-GQs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yX-lF-bU9">
+                                <rect key="frame" x="353" y="331" width="41" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3yX-lF-bU9" secondAttribute="height" multiplier="1:1" id="3Bv-o3-pgg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="arrow.clockwise.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="updateVolume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W3C-rY-eH7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QW-yG-bhO">
+                                <rect key="frame" x="20" y="388" width="81.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="sWd-Rk-mfZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="0.5l "/>
+                                <connections>
+                                    <action selector="sellBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zWZ-ve-yd2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPO-nV-lAD">
+                                <rect key="frame" x="117.5" y="388" width="81.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="e1G-la-Ldw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="1l"/>
+                                <connections>
+                                    <action selector="sellBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="85C-Kk-qAy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ooh-i1-2Ci">
+                                <rect key="frame" x="312.5" y="388" width="81.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="NG4-LA-Vnt"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="2l"/>
+                                <connections>
+                                    <action selector="sellBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idr-3I-c1j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggY-gn-kzt">
+                                <rect key="frame" x="215" y="388" width="81.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Lnw-81-tRw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="1.5l"/>
+                                <connections>
+                                    <action selector="sellBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vaz-6Z-TUe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="пиво 50 р,  стран, ост" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTZ-SH-Xax">
+                                <rect key="frame" x="20" y="439" width="317" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="4Km-61-bxi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrI-AE-i0D">
+                                <rect key="frame" x="353" y="439" width="41" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FrI-AE-i0D" secondAttribute="height" multiplier="1:1" id="Vcy-Bq-lw2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="arrow.clockwise.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="updateVolume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UXa-X7-nEW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qF9-0l-cXv">
+                                <rect key="frame" x="20" y="496" width="81.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="7uV-Ug-Oez"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="0.5l "/>
+                                <connections>
+                                    <action selector="sellBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VGg-cy-SmY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8J5-G5-IjY">
+                                <rect key="frame" x="117.5" y="496" width="81.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="s37-iu-9FJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="1l"/>
+                                <connections>
+                                    <action selector="sellBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UHY-rj-0Zf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hU7-XV-Wbk">
+                                <rect key="frame" x="215" y="496" width="81.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="nCw-94-RcT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="1.5l"/>
+                                <connections>
+                                    <action selector="sellBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CAX-H1-sW4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vZ-Qz-AyR">
+                                <rect key="frame" x="312.5" y="496" width="81.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="aEw-WG-9mp"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="2l"/>
+                                <connections>
+                                    <action selector="sellBeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R4W-FY-tdo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последняя обновленная выручка: 1111111" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgI-1e-H7T">
+                                <rect key="frame" x="20" y="547" width="374" height="41"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последняя продажа: успешно" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2v-Du-i85">
+                                <rect key="frame" x="20" y="608" width="374" height="41"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qF9-0l-cXv" firstAttribute="width" secondItem="9vZ-Qz-AyR" secondAttribute="width" id="0ym-8m-JVp"/>
+                            <constraint firstItem="wJa-84-IfU" firstAttribute="leading" secondItem="WVw-zl-Yey" secondAttribute="trailing" constant="16" id="1na-m9-iDf"/>
+                            <constraint firstItem="FrI-AE-i0D" firstAttribute="width" secondItem="FrI-AE-i0D" secondAttribute="height" multiplier="1:1" id="2uU-BQ-xGk"/>
+                            <constraint firstItem="hU7-XV-Wbk" firstAttribute="leading" secondItem="8J5-G5-IjY" secondAttribute="trailing" constant="16" id="4Lw-8D-9v7"/>
+                            <constraint firstItem="3yX-lF-bU9" firstAttribute="top" secondItem="Mh2-fV-zwd" secondAttribute="bottom" constant="20" id="4qj-af-YF5"/>
+                            <constraint firstItem="IPO-nV-lAD" firstAttribute="top" secondItem="eKr-pG-dfp" secondAttribute="bottom" constant="16" id="4rk-4E-oqc"/>
+                            <constraint firstItem="6kA-4H-UXK" firstAttribute="top" secondItem="2bn-xE-abf" secondAttribute="bottom" constant="20" id="5La-Y6-L4g"/>
+                            <constraint firstItem="3YN-rt-nSw" firstAttribute="top" secondItem="rFh-4R-JMq" secondAttribute="bottom" constant="16" id="5vd-uF-05J"/>
+                            <constraint firstItem="uBs-m6-DwN" firstAttribute="width" secondItem="wJa-84-IfU" secondAttribute="width" id="6tJ-XV-hb7"/>
+                            <constraint firstItem="hLL-cC-tGy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="76f-HP-SNu"/>
+                            <constraint firstItem="Mh2-fV-zwd" firstAttribute="top" secondItem="OEL-fU-6NY" secondAttribute="bottom" constant="16" id="7dZ-YK-1Ia"/>
+                            <constraint firstItem="rFh-4R-JMq" firstAttribute="height" secondItem="6kA-4H-UXK" secondAttribute="height" id="7nF-Xq-Zrk"/>
+                            <constraint firstItem="qF9-0l-cXv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="81Y-Yl-vJL"/>
+                            <constraint firstItem="FrI-AE-i0D" firstAttribute="top" secondItem="IPO-nV-lAD" secondAttribute="bottom" constant="20" id="8Dm-qK-1aa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3yX-lF-bU9" secondAttribute="trailing" constant="20" id="8Kl-aM-dqY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wJa-84-IfU" secondAttribute="trailing" constant="20" id="8xP-Jn-5k3"/>
+                            <constraint firstItem="7QW-yG-bhO" firstAttribute="width" secondItem="IPO-nV-lAD" secondAttribute="width" id="9OL-k1-ZeT"/>
+                            <constraint firstItem="8J5-G5-IjY" firstAttribute="top" secondItem="dTZ-SH-Xax" secondAttribute="bottom" constant="16" id="9ex-hN-GYO"/>
+                            <constraint firstItem="7QW-yG-bhO" firstAttribute="width" secondItem="ggY-gn-kzt" secondAttribute="width" id="A4y-4l-6Um"/>
+                            <constraint firstItem="IPO-nV-lAD" firstAttribute="leading" secondItem="7QW-yG-bhO" secondAttribute="trailing" constant="16" id="ADW-xH-QLJ"/>
+                            <constraint firstItem="BgI-1e-H7T" firstAttribute="top" secondItem="qF9-0l-cXv" secondAttribute="bottom" constant="20" id="BiJ-lg-HD4"/>
+                            <constraint firstItem="Ooh-i1-2Ci" firstAttribute="leading" secondItem="ggY-gn-kzt" secondAttribute="trailing" constant="16" id="CSg-42-ECs"/>
+                            <constraint firstItem="hLL-cC-tGy" firstAttribute="width" secondItem="Mh2-fV-zwd" secondAttribute="width" id="Cfc-CM-XiB"/>
+                            <constraint firstItem="8J5-G5-IjY" firstAttribute="leading" secondItem="qF9-0l-cXv" secondAttribute="trailing" constant="16" id="DAg-d1-Xqm"/>
+                            <constraint firstItem="2bn-xE-abf" firstAttribute="leading" secondItem="SLq-Jy-fYL" secondAttribute="trailing" constant="16" id="EWf-nq-nC7"/>
+                            <constraint firstItem="BgI-1e-H7T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GyS-Xj-xlS"/>
+                            <constraint firstItem="dTZ-SH-Xax" firstAttribute="top" secondItem="7QW-yG-bhO" secondAttribute="bottom" constant="20" id="HHu-fK-otj"/>
+                            <constraint firstItem="yTU-gQ-gX5" firstAttribute="top" secondItem="OEL-fU-6NY" secondAttribute="bottom" constant="16" id="HTc-FK-gs2"/>
+                            <constraint firstItem="9vZ-Qz-AyR" firstAttribute="top" secondItem="dTZ-SH-Xax" secondAttribute="bottom" constant="16" id="HfK-eg-O54"/>
+                            <constraint firstItem="7QW-yG-bhO" firstAttribute="width" secondItem="Ooh-i1-2Ci" secondAttribute="width" id="JmB-kz-8C8"/>
+                            <constraint firstItem="qF9-0l-cXv" firstAttribute="width" secondItem="8J5-G5-IjY" secondAttribute="width" id="JnF-PZ-9dA"/>
+                            <constraint firstItem="OEL-fU-6NY" firstAttribute="top" secondItem="uBs-m6-DwN" secondAttribute="bottom" constant="20" id="Kxy-B2-RQv"/>
+                            <constraint firstItem="dTZ-SH-Xax" firstAttribute="height" secondItem="FrI-AE-i0D" secondAttribute="height" id="LHc-Jl-Nd8"/>
+                            <constraint firstItem="wJa-84-IfU" firstAttribute="top" secondItem="rFh-4R-JMq" secondAttribute="bottom" constant="16" id="MkY-eH-F98"/>
+                            <constraint firstItem="OEL-fU-6NY" firstAttribute="height" secondItem="8XY-eS-DbN" secondAttribute="height" id="O5W-Id-hzK"/>
+                            <constraint firstItem="f2v-Du-i85" firstAttribute="top" secondItem="BgI-1e-H7T" secondAttribute="bottom" constant="20" id="O7W-59-oSE"/>
+                            <constraint firstItem="8XY-eS-DbN" firstAttribute="leading" secondItem="OEL-fU-6NY" secondAttribute="trailing" constant="16" id="Qw1-Eb-gmb"/>
+                            <constraint firstItem="SLq-Jy-fYL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="R8d-7Q-rKi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FrI-AE-i0D" secondAttribute="trailing" constant="20" id="Rz5-Ce-zPE"/>
+                            <constraint firstItem="2bn-xE-abf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Slf-9e-znX"/>
+                            <constraint firstItem="WVw-zl-Yey" firstAttribute="leading" secondItem="3YN-rt-nSw" secondAttribute="trailing" constant="16" id="Stn-EP-Ddw"/>
+                            <constraint firstItem="eKr-pG-dfp" firstAttribute="top" secondItem="hLL-cC-tGy" secondAttribute="bottom" constant="20" id="TLB-q5-1vV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2bn-xE-abf" secondAttribute="trailing" constant="20" id="TeE-fS-uvQ"/>
+                            <constraint firstItem="hU7-XV-Wbk" firstAttribute="top" secondItem="dTZ-SH-Xax" secondAttribute="bottom" constant="16" id="Tiq-8m-1om"/>
+                            <constraint firstItem="9vZ-Qz-AyR" firstAttribute="leading" secondItem="hU7-XV-Wbk" secondAttribute="trailing" constant="16" id="UNM-Be-wYz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9vZ-Qz-AyR" secondAttribute="trailing" constant="20" id="VU1-SM-EB5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BgI-1e-H7T" secondAttribute="trailing" constant="20" id="VgH-ez-189"/>
+                            <constraint firstItem="7QW-yG-bhO" firstAttribute="top" secondItem="eKr-pG-dfp" secondAttribute="bottom" constant="16" id="Vmc-vj-BIl"/>
+                            <constraint firstItem="hLL-cC-tGy" firstAttribute="top" secondItem="OEL-fU-6NY" secondAttribute="bottom" constant="16" id="WLO-xF-P72"/>
+                            <constraint firstItem="3yX-lF-bU9" firstAttribute="width" secondItem="3yX-lF-bU9" secondAttribute="height" multiplier="1:1" id="WT8-Bz-evp"/>
+                            <constraint firstItem="dTZ-SH-Xax" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Z3D-Sn-65g"/>
+                            <constraint firstItem="Mh2-fV-zwd" firstAttribute="leading" secondItem="yTU-gQ-gX5" secondAttribute="trailing" constant="16" id="Zp6-zg-fr7"/>
+                            <constraint firstItem="uBs-m6-DwN" firstAttribute="width" secondItem="3YN-rt-nSw" secondAttribute="width" id="a2F-eV-VHZ"/>
+                            <constraint firstItem="ggY-gn-kzt" firstAttribute="leading" secondItem="IPO-nV-lAD" secondAttribute="trailing" constant="16" id="a7B-j0-L3P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ooh-i1-2Ci" secondAttribute="trailing" constant="20" id="a8J-sE-GdF"/>
+                            <constraint firstItem="FrI-AE-i0D" firstAttribute="width" secondItem="FrI-AE-i0D" secondAttribute="height" multiplier="1:1" id="b4l-Tp-udV"/>
+                            <constraint firstItem="7QW-yG-bhO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bkN-PO-HsW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f2v-Du-i85" secondAttribute="trailing" constant="20" id="cGT-0t-XS9"/>
+                            <constraint firstItem="3YN-rt-nSw" firstAttribute="leading" secondItem="uBs-m6-DwN" secondAttribute="trailing" constant="16" id="dXF-31-WfX"/>
+                            <constraint firstItem="f2v-Du-i85" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ddn-dd-UY3"/>
+                            <constraint firstItem="eKr-pG-dfp" firstAttribute="height" secondItem="3yX-lF-bU9" secondAttribute="height" id="dss-uJ-yCo"/>
+                            <constraint firstItem="6kA-4H-UXK" firstAttribute="leading" secondItem="rFh-4R-JMq" secondAttribute="trailing" constant="16" id="eA3-2O-AXb"/>
+                            <constraint firstItem="uBs-m6-DwN" firstAttribute="top" secondItem="rFh-4R-JMq" secondAttribute="bottom" constant="16" id="ei6-gu-eD4"/>
+                            <constraint firstItem="8XY-eS-DbN" firstAttribute="width" secondItem="8XY-eS-DbN" secondAttribute="height" multiplier="1:1" id="euo-cx-ddg"/>
+                            <constraint firstItem="SLq-Jy-fYL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eyp-nB-Ery"/>
+                            <constraint firstItem="8XY-eS-DbN" firstAttribute="top" secondItem="wJa-84-IfU" secondAttribute="bottom" constant="20" id="g1t-gR-4kg"/>
+                            <constraint firstItem="FrI-AE-i0D" firstAttribute="leading" secondItem="dTZ-SH-Xax" secondAttribute="trailing" constant="16" id="ggf-7I-ChV"/>
+                            <constraint firstItem="WVw-zl-Yey" firstAttribute="top" secondItem="rFh-4R-JMq" secondAttribute="bottom" constant="16" id="iW1-jF-LD0"/>
+                            <constraint firstItem="TvD-QK-I6M" firstAttribute="leading" secondItem="hLL-cC-tGy" secondAttribute="trailing" constant="16" id="icd-cV-UdY"/>
+                            <constraint firstItem="rFh-4R-JMq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ifd-UM-cUQ"/>
+                            <constraint firstItem="qF9-0l-cXv" firstAttribute="width" secondItem="hU7-XV-Wbk" secondAttribute="width" id="jeo-cf-w6M"/>
+                            <constraint firstItem="hLL-cC-tGy" firstAttribute="width" secondItem="yTU-gQ-gX5" secondAttribute="width" id="kVD-sO-vuR"/>
+                            <constraint firstItem="rFh-4R-JMq" firstAttribute="top" secondItem="SLq-Jy-fYL" secondAttribute="bottom" constant="20" id="knB-GN-kFy"/>
+                            <constraint firstItem="3yX-lF-bU9" firstAttribute="leading" secondItem="eKr-pG-dfp" secondAttribute="trailing" constant="16" id="kub-s6-aIn"/>
+                            <constraint firstItem="hLL-cC-tGy" firstAttribute="width" secondItem="TvD-QK-I6M" secondAttribute="width" id="lNB-Kj-ZPN"/>
+                            <constraint firstItem="FrI-AE-i0D" firstAttribute="width" secondItem="FrI-AE-i0D" secondAttribute="height" multiplier="1:1" id="mht-ZQ-i8N"/>
+                            <constraint firstItem="2bn-xE-abf" firstAttribute="width" secondItem="SLq-Jy-fYL" secondAttribute="width" id="nwn-Of-7O4"/>
+                            <constraint firstItem="SLq-Jy-fYL" firstAttribute="height" secondItem="2bn-xE-abf" secondAttribute="height" id="pb0-5U-6tK"/>
+                            <constraint firstItem="yTU-gQ-gX5" firstAttribute="leading" secondItem="TvD-QK-I6M" secondAttribute="trailing" constant="16" id="qHU-8n-VU9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mh2-fV-zwd" secondAttribute="trailing" constant="20" id="rAZ-A4-VVb"/>
+                            <constraint firstItem="TvD-QK-I6M" firstAttribute="top" secondItem="OEL-fU-6NY" secondAttribute="bottom" constant="16" id="sf2-23-n0k"/>
+                            <constraint firstItem="ggY-gn-kzt" firstAttribute="top" secondItem="eKr-pG-dfp" secondAttribute="bottom" constant="16" id="sx4-Zf-eRW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6kA-4H-UXK" secondAttribute="trailing" constant="20" id="tYL-qb-oyI"/>
+                            <constraint firstItem="3yX-lF-bU9" firstAttribute="width" secondItem="3yX-lF-bU9" secondAttribute="height" multiplier="1:1" id="tg9-ng-DJv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8XY-eS-DbN" secondAttribute="trailing" constant="20" id="u2L-ap-cu8"/>
+                            <constraint firstItem="uBs-m6-DwN" firstAttribute="width" secondItem="WVw-zl-Yey" secondAttribute="width" id="vCq-EG-HDD"/>
+                            <constraint firstItem="qF9-0l-cXv" firstAttribute="top" secondItem="dTZ-SH-Xax" secondAttribute="bottom" constant="16" id="vvG-4c-ErN"/>
+                            <constraint firstItem="OEL-fU-6NY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ylN-XA-wCF"/>
+                            <constraint firstItem="eKr-pG-dfp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ynr-1w-W3Q"/>
+                            <constraint firstItem="uBs-m6-DwN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ytw-ug-wMy"/>
+                            <constraint firstItem="Ooh-i1-2Ci" firstAttribute="top" secondItem="eKr-pG-dfp" secondAttribute="bottom" constant="16" id="zSa-Ju-ofR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lastMoney" destination="BgI-1e-H7T" id="EjM-JY-nnR"/>
+                        <outlet property="lastSell" destination="f2v-Du-i85" id="lSk-fj-BQ8"/>
+                        <outletCollection property="beers" destination="rFh-4R-JMq" collectionClass="NSMutableArray" id="51Q-5U-N8V"/>
+                        <outletCollection property="beers" destination="OEL-fU-6NY" collectionClass="NSMutableArray" id="kN4-hG-gCa"/>
+                        <outletCollection property="beers" destination="eKr-pG-dfp" collectionClass="NSMutableArray" id="pNw-t7-SLR"/>
+                        <outletCollection property="beers" destination="dTZ-SH-Xax" collectionClass="NSMutableArray" id="q2F-HD-Rmg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
